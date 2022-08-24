@@ -30,6 +30,8 @@ namespace UniversityCoursesApi.Controllers
               return NotFound();
           }
             return await _context.Users.ToListAsync();
+
+            //_context.Users.All
         }
 
         // GET: api/Users/5
