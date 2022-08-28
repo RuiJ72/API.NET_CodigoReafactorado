@@ -10298,8 +10298,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rui Lagos\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Rui Lagos\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -10310,12 +10309,8 @@
       "packagesPath": "C:\\Users\\Rui Lagos\\.nuget\\packages\\",
       "outputPath": "C:\\APS .NET\\University\\UniversityCoursesApi\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\Rui Lagos\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

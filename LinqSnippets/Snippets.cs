@@ -256,14 +256,58 @@ namespace LinqSnippets
 
         }
 
+        // Paging with Skip and Take
+        static public IEnumerable<T> GetPage<T>(IEnumerable<T> collection, int pageNumebr, int resultsPerPage)
+        {
+            int startIndex = (pageNumebr - 1) * resultsPerPage;
+            return collection.Skip(startIndex).Take(resultsPerPage);
+        }
+
+
         // Variables
+        static public void LinqVariables()
+        {
+            int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
+            var aboveAverage = from number in numbers
+                               let average = numbers.Average()
+                               let nSquare = Math.Pow(number, 2)
+                               where nSquare > average
+                               select number;
+            
+            Console.WriteLine("Average: {0}", numbers.Average());
 
-
+            foreach (int number in aboveAverage)
+            {
+                Console.WriteLine("Query: number: {0} square: {1}", number, Math.Pow(number, 2));
+            }
+        }
         // ZIP
+        static public void ZipLinq()
+        {
+            int[] numbers = { 1, 2, 3, 4, 5 };
+            string[] stringsNumbers = { "one", "two", "three", "four", "five" };
 
-
+            IEnumerable<string> zipNumbers = numbers.Zip(stringsNumbers, (number, word) => number + "=" + word);
+            // We are going to obtain a list like {"1=one", 2="two"...} and so on
+        }
         // Repeat
+        static public void repeatRangeLinq()
+        {
+            // Generate a collection of values from 1 - 1000 -> Range
+            IEnumerable<int> fisrt1000 = Enumerable.Range(1, 1000);
+
+            //var aboveAverage = from number in first1000
+            //                   select number;
+
+            // Repeat a value N times
+            IEnumerable<string> fiveXs = Enumerable.Repeat("x", 5); // A list of xxxxx -> five x`s
+
+
+
+        }
+
+
 
 
         // All
