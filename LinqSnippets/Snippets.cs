@@ -306,19 +306,173 @@ namespace LinqSnippets
 
 
         }
+        static public void studentsLinq()
+        {
+            // List of students
+            var classRoom = new[]
+            {
+                new Student
+                {
+                    Id = 1,
+                    Name = "Rui",
+                    Grade = 60,
+                    Certified = true,
+                },
+                 new Student
+                {
+                    Id = 2,
+                    Name = "Marta",
+                    Grade = 45,
+                    Certified = false,
+                },
+                  new Student
+                {
+                    Id = 3,
+                    Name = "Marco",
+                    Grade = 15,
+                    Certified = false,
+                },
+                   new Student
+                {
+                    Id = 4,
+                    Name = "teresa",
+                    Grade = 70,
+                    Certified = true,
+                },
+                    new Student
+                {
+                    Id = 5,
+                    Name = "Carol",
+                    Grade = 80,
+                    Certified = true,
+                }
 
 
+            };
 
+            // Obtaining the certified students
+            var certifiedStudents = from student in classRoom
+                                    where student.Certified
+                                    select student;
 
+            var notCertifiedStudents = from student in classRoom
+                                       where student.Certified == false
+                                       select student;
+
+            var approvedStudentsNames = from student in classRoom
+                                   where student.Grade >= 50 && student.Certified == true
+                                   select student.Name;
+        }
         // All
+        static public void AllLinq()
+        {
+            var numbers = new List<int>() { 1, 2, 3, 4, 5 };
 
+            bool allAreSmallerThan10 = numbers.All(x => x < 10); // true
+            bool allAreBiggerOrEqualThan2 = numbers.All(x => x >= 2); // false
+
+            var emptyList = new List<int>();
+
+            bool allNumbersAreGreaterThan0 = numbers.All(x => x >= 0); // true
+        }
         // Aggregate
+        static public void aggregateQueries()
+        {
+            int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
+            // Sum of all numbers
+            int sum = numbers.Aggregate((prevsum, current) => prevsum + current);
+
+            // 0, 1 => 1
+            // 1, 2 => 3
+            // 3, 4 => 7 etc.
+
+            string[] words = { "Hello", "my", "name", "is", "Rui" };
+            string greeting = words.Aggregate((prevGreeting, current) => prevGreeting + current);
+
+            // "", "hello"
+            // "", "hello", "my" etc -> it`s an iteration
+
+        }
         // Distinct
+        public static void distinctValue()
+        {
+            int[] numbers = { 1, 2, 3, 4, 5, 5, 4, 3, 2, 1 };
 
+            IEnumerable<int> distinctValues = numbers.Distinct();
+
+        }
         // GroupBy
+        static public void groupByExamples()
+        {
+            List<int> numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
+            // Obtain only even numbers generating two groups
+            var grouped = numbers.GroupBy(x => x % 2 == 0);
+
+            foreach (var group in grouped)
+            {   
+                foreach (var value in group)
+                {
+                    Console.WriteLine(value); // First the odd and then the even
+                }
+               
+            }
+
+            // Another example
+            var classRoom = new[]
+           {
+                new Student
+                {
+                    Id = 1,
+                    Name = "Rui",
+                    Grade = 60,
+                    Certified = true,
+                },
+                 new Student
+                {
+                    Id = 2,
+                    Name = "Marta",
+                    Grade = 45,
+                    Certified = false,
+                },
+                  new Student
+                {
+                    Id = 3,
+                    Name = "Marco",
+                    Grade = 15,
+                    Certified = false,
+                },
+                   new Student
+                {
+                    Id = 4,
+                    Name = "teresa",
+                    Grade = 70,
+                    Certified = true,
+                },
+                    new Student
+                {
+                    Id = 5,
+                    Name = "Carol",
+                    Grade = 80,
+                    Certified = true,
+                }
 
 
+            };
 
+            var certifiedQuery = classRoom.GroupBy(student => student.Certified && student.Grade >= 50);
+
+            // Obtaining two groups, first the no certified and 2. the certified ones
+
+            foreach (var group in certifiedQuery)
+            {
+                Console.WriteLine("---------- {0} --------", group.Key);
+                foreach (var student in group)
+                {
+                    Console.WriteLine(student.Name); // 1st The certified an the the no certified
+                }
+            }
+        }
     }
 }
