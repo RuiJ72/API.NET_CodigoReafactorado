@@ -474,5 +474,74 @@ namespace LinqSnippets
                 }
             }
         }
+
+        static public void relationsLinq()
+        {
+            List<Post> posts = new List<Post>()
+            {
+                new Post()
+                {
+                    Id =1,
+                    Title = "First post",
+                    Content = "First content",
+                    Created = DateTime.Now,
+                    Comments = new List<Comment>()
+                    {
+                        new Comment()
+                        {
+                            Id = 1,
+                            Created = DateTime.Now,
+                            Title = "First comment",
+                            Content = "Content"
+                        },
+                         new Comment()
+                        {
+                            Id = 2,
+                            Created = DateTime.Now,
+                            Title = "Second comment",
+                            Content = "Content"
+                        },
+                          new Comment()
+                        {
+                            Id = 3,
+                            Created = DateTime.Now,
+                            Title = "Third comment",
+                            Content = "More Content"
+                        }
+                    }
+                },
+                new Post()
+                {
+                    Id =2,
+                    Title = "Second post",
+                    Content = "Second content",
+                    Created = DateTime.Now,
+                    Comments = new List<Comment>()
+                    {
+                        new Comment()
+                        {
+                            Id = 3,
+                            Created = DateTime.Now,
+                            Title = "Other comment",
+                            Content = "New Content"
+                        },
+                         new Comment()
+                        {
+                            Id = 4,
+                            Created = DateTime.Now,
+                            Title = "New other comment",
+                            Content = "Other Content"
+                        },
+                     
+                    }
+                }
+            };
+
+            var commentContent = posts.SelectMany(
+                post => post.Comments,
+                (post, Comment) => new { postId = post.Id, 
+                CommentContent = Comment.Content } );
+
+        }
     }
 }
