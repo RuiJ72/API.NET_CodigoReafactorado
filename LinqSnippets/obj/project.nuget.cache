@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fwWt5D60j+9KP6mv3DVklfYss/pAHs8Z6sF7awm7jjGnrLmTyVJyb0CWyEw4nsnIpJxUPmzEYJ/0Ar3E4GyVVQ==",
+  "dgSpecHash": "1AoDCMwpQLhQNfzMdBjhhP8XmptSUUDz9FIPbcIEFvdwX4hXWKEJLoDd3XU/pU7FaHd86TOZIAC6SGC99F2APw==",
   "success": true,
-  "projectFilePath": "C:\\APS .NET\\University\\LinqSnippets\\LinqSnippets.csproj",
+  "projectFilePath": "C:\\APS .NET\\LinqSnippets\\LinqSnippets.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

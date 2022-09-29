@@ -335,7 +335,7 @@ namespace LinqSnippets
                    new Student
                 {
                     Id = 4,
-                    Name = "teresa",
+                    Name = "Teresa",
                     Grade = 70,
                     Certified = true,
                 },
@@ -537,7 +537,7 @@ namespace LinqSnippets
                 }
             };
 
-            var commentContent = posts.SelectMany(
+            var commentsWithContent = posts.SelectMany(
                 post => post.Comments,
                 (post, Comment) => new { postId = post.Id, 
                 CommentContent = Comment.Content } );

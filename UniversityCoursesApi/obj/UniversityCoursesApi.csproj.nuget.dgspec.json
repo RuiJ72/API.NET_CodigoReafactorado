@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\APS .NET\\University\\UniversityCoursesApi\\UniversityCoursesApi.csproj": {}
+    "C:\\APS .NET\\UniversityCoursesApi\\UniversityCoursesApi.csproj": {}
   },
   "projects": {
-    "C:\\APS .NET\\University\\UniversityCoursesApi\\UniversityCoursesApi.csproj": {
+    "C:\\APS .NET\\UniversityCoursesApi\\UniversityCoursesApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\APS .NET\\University\\UniversityCoursesApi\\UniversityCoursesApi.csproj",
+        "projectUniqueName": "C:\\APS .NET\\UniversityCoursesApi\\UniversityCoursesApi.csproj",
         "projectName": "UniversityCoursesApi",
-        "projectPath": "C:\\APS .NET\\University\\UniversityCoursesApi\\UniversityCoursesApi.csproj",
+        "projectPath": "C:\\APS .NET\\UniversityCoursesApi\\UniversityCoursesApi.csproj",
         "packagesPath": "C:\\Users\\Rui Lagos\\.nuget\\packages\\",
-        "outputPath": "C:\\APS .NET\\University\\UniversityCoursesApi\\obj\\",
+        "outputPath": "C:\\APS .NET\\UniversityCoursesApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rui Lagos\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -44,25 +44,25 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.8, )"
+              "version": "[6.0.9, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.8, )"
+              "version": "[6.0.9, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.8, )"
+              "version": "[6.0.9, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Core": {
               "target": "Package",
-              "version": "[6.0.8, )"
+              "version": "[6.0.10, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[6.0.8, )"
+              "version": "[6.0.10, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -88,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
